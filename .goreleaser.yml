@@ -30,8 +30,6 @@ archives:
     format_overrides:
       - goos: windows
         format: zip
-    replacements:
-      darwin: macOS
     files:
       - README.md
       - LICENSE
