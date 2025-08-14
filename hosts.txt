@@ -1,0 +1,21 @@
+
+mozilla.org,Mozilla
+www.digitalcourage.de,Digitalcourage
+quad9.net,Quad9 DNS
+www.eff.org,Electronic Frontier Foundation
+fsf.org,Free Software Foundation
+www.torproject.org,Tor Project
+proton.me,Proton (Mail/VPN)
+signal.org,Signal Messenger
+duckduckgo.com,DuckDuckGo Search
+tails.net,Tails OS
+whonix.org,Whonix OS
+nextcloud.com,Nextcloud
+matrix.org,Matrix.org
+gnu.org,GNU Project
+openbsd.org,OpenBSD
+privacytools.io,PrivacyTools Directory
+searx.space,Searx Search
+www.startpage.com,StartPage Search
+cryptpad.org,CryptPad Suite
+briarproject.org,Briar Project
