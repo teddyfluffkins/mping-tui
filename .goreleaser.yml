@@ -1,0 +1,51 @@
+project_name: mping
+
+# Build configuration for goreleaser. This file tells goreleaser how to
+# compile and package mping for multiple platforms. After committing this
+# file you can create a tagged release and run `goreleaser release`
+# (or use a GitHub Actions workflow) to automatically build and publish
+# release artifacts.
+
+builds:
+  - id: mping
+    main: ./main.go
+    binary: mping
+    # Disable CGO to ensure static binaries and avoid cross‑compile issues
+    env: [CGO_ENABLED=0]
+    ldflags: ["-s", "-w"]
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    # On Windows the binary will automatically receive a .exe extension
+
+archives:
+  - id: default
+    builds: [mping]
+    name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+    format: tar.gz
+    format_overrides:
+      - goos: windows
+        format: zip
+    replacements:
+      darwin: macOS
+    files:
+      - README.md
+      - LICENSE
+      - hosts.txt
+
+# Generate a checksums file for all artifacts
+checksum:
+  name_template: '{{ .ProjectName }}_{{ .Version }}_checksums.txt'
+
+# GitHub release configuration (optional, goreleaser will publish
+# artifacts if you set `GITHUB_TOKEN` in your environment)
+release:
+  draft: true
+  prerelease: false
+
+snapshot:
+  name_template: "snapshot"
