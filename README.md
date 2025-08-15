@@ -47,7 +47,7 @@ cancel.
 2. **Clone this repository** and enter it:
 
    ```bash
-   git clone https://github.com/teddyfluffkins/mping-tui.git
+   git clone https://github.com/your‑username/mping.git
    cd mping
    ```
 
@@ -83,6 +83,17 @@ cancel.
    ```bash
    ./mping
    ```
+
+## 🍺 Installation via Homebrew
+
+If you use Homebrew on macOS or Linux, you can install mping directly from our tap instead of building it yourself. First add the tap, then install:
+
+```bash
+brew tap teddyfluffkins/homebrew-tap
+brew install mping
+```
+
+Homebrew will download the latest release binary and link it into your `$PATH`. If a new version is published, you can upgrade via `brew upgrade mping`.
 
 ## 🧑‍💻 How it works
 
