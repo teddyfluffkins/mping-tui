@@ -90,7 +90,7 @@ If you use Homebrew on macOS or Linux, you can install mping directly from our t
 
 ```bash
 brew tap teddyfluffkins/homebrew-tap
-brew install mping
+brew install mping-tui
 ```
 
 Homebrew will download the latest release binary and link it into your `$PATH`. If a new version is published, you can upgrade via `brew upgrade mping`.
